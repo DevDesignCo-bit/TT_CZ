@@ -152,7 +152,7 @@ body {
   padding: 0 30px;
   text-align: center;
 }
-.site-footer-menu { display: flex; justify-content: center; margin: 0 0 20px; white-space: nowrap; }
+.site-footer-menu { display: flex; flex-wrap: wrap; justify-content: center; margin: 0 0 20px; white-space: nowrap; }
 .site-footer-menu a {
   display: block;
   color: inherit;
@@ -181,8 +181,9 @@ body {
 }
 
 @media (max-width: 430px) {
-  .site-footer { font-size: 10px; }
-  .site-footer-menu a + a { margin-left: 12px; }
+  .site-footer { font-size: 9px; }
+  .site-footer-menu { row-gap: 0; }
+  .site-footer-menu a + a { margin-left: 8px; }
 }
 
 /* Trend & Trade customer-care page */
