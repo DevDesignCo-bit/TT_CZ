@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#141414">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Kontaktujte nás | Trend &amp; Trade</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="tt-contact-page">
+      <div class="tt-contact-top">
+        <a class="tt-contact-back" href="index.html"><span>‹</span>Kontaktujte nás</a>
+      </div>
+
+      <form class="tt-contact-form" action="mailto:support@nextmove.digital" method="post" enctype="text/plain">
+        <p>Jsme tu pro vás! Jak vám můžeme pomoci?</p>
+        <div class="tt-contact-row">
+          <label>
+            <span class="sr-only">E-mail</span>
+            <input class="tt-contact-field" type="email" name="email" placeholder="Zadejte e-mail: priklad@email.cz" required>
+          </label>
+          <label>
+            <span class="sr-only">Vyberte problém</span>
+            <select class="tt-contact-select" name="issue" required>
+              <option value="" selected disabled>Vyberte problém</option>
+              <option>Přístup ke službě</option>
+              <option>Objednávka a platba</option>
+              <option>Technický problém</option>
+              <option>Jiné</option>
+            </select>
+          </label>
+        </div>
+        <label>
+          <span class="sr-only">Popište svůj problém</span>
+          <textarea class="tt-contact-message" name="message" placeholder="Popište zde svůj problém" required></textarea>
+        </label>
+        <div class="tt-contact-utility">
+          <div class="tt-contact-attachment">
+            <span>Příloha</span>
+            <div class="tt-contact-file-row">
+              <label class="tt-contact-file">Vybrat soubory<input type="file" name="attachment" aria-label="Vybrat soubor"></label>
+              <span class="tt-contact-file-status">Soubor nevybrán</span>
+            </div>
+          </div>
+          <!-- Replace this visual placeholder with the campaign's verified CAPTCHA provider before production. -->
+          <div class="tt-contact-captcha" role="img" aria-label="Ověření proti spamu vyžaduje konfiguraci">
+            <span class="tt-contact-captcha-box"></span><span>Nejsem robot</span><small>reCAPTCHA<br>Soukromí – podmínky</small>
+          </div>
+        </div>
+        <button class="tt-contact-send" type="submit">Odeslat</button>
+        <div class="tt-contact-user"><p>Uživatel</p><output>Uživatel Wi‑Fi nebyl zjištěn</output></div>
+      </form>
+
+      <footer class="site-footer">
+        <div class="site-footer-bottom">
+          <nav class="site-footer-menu" aria-label="Právní a kontaktní odkazy">
+            <a href="contact.html">Kontaktujte nás</a>
+            <a href="faq.html">Často kladené otázky</a>
+            <a href="terms.html">Podmínky používání</a>
+          </nav>
+          <p class="site-footer-copyright">©Trend&amp;Trade Všechna práva vyhrazena</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

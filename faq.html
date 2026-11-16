@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#141414">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Často kladené otázky | Trend &amp; Trade</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="tt-care-page">
+      <header class="tt-header" data-menu>
+        <a class="tt-wordmark" href="index.html">Trend &amp; <em>Trade</em></a>
+        <button class="tt-menu-toggle" type="button" aria-label="Otevřít navigaci" aria-expanded="false" aria-controls="tt-navigation">☰</button>
+        <nav class="tt-nav" id="tt-navigation" aria-label="Hlavní navigace">
+          <a href="https://trendtrade.net/category/business">Byznys</a>
+          <a href="https://trendtrade.net/category/lifestyle">Životní styl</a>
+          <a href="https://trendtrade.net/games">Hry</a>
+          <a href="contact.html">Kontaktujte nás</a>
+          <a href="faq.html">Často kladené otázky</a>
+          <a href="terms.html">Podmínky používání</a>
+        </nav>
+      </header>
+
+      <main class="tt-faq-main">
+        <a class="tt-terms-back" href="index.html"><span>‹</span>Často kladené otázky</a>
+        <section class="tt-faq-accordion" aria-label="Často kladené otázky">
+          <details>
+            <summary>Co je Trend&amp;Trade?</summary>
+            <p>Trend&amp;Trade nabízí vybrané digitální časopisy z oblasti byznysu a životního stylu.</p>
+          </details>
+          <details>
+            <summary>Jak funguje jednorázový přístup?</summary>
+            <p>Po dokončení objednávky přes SMS získáte přístup podle podmínek uvedených v objednávkovém toku. Služba se automaticky neobnovuje.</p>
+          </details>
+          <details>
+            <summary>Jaké výhody Trend&amp;Trade nabízí?</summary>
+            <p>Získáte přístup k pestrému výběru obsahu zaměřeného na aktuální témata z byznysu a životního stylu.</p>
+          </details>
+          <details>
+            <summary>Jak získám přístup k obsahu?</summary>
+            <p>Na objednávkové stránce stiskněte tlačítko objednávky a odešlete předvyplněnou SMS s uvedeným klíčovým slovem.</p>
+          </details>
+          <details>
+            <summary>Je možné službu vyzkoušet před objednávkou?</summary>
+            <p>Aktuální nabídka a cena jsou vždy zobrazeny před dokončením objednávky.</p>
+          </details>
+          <details>
+            <summary>Jsou moje osobní údaje v bezpečí?</summary>
+            <p>Osobní údaje používáme pouze v rozsahu potřebném pro provoz služby a zákaznickou podporu. Více informací najdete v <a href="privacy.html">zásadách ochrany soukromí</a>.</p>
+          </details>
+          <details>
+            <summary>Kde získám další pomoc?</summary>
+            <p>Navštivte <a href="customer-care.html">zákaznickou péči</a> nebo napište na <a href="mailto:support@nextmove.digital">support@nextmove.digital</a>.</p>
+          </details>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer-bottom">
+          <nav class="site-footer-menu" aria-label="Právní a kontaktní odkazy">
+            <a href="contact.html">Kontaktujte nás</a>
+            <a href="faq.html">Často kladené otázky</a>
+            <a href="terms.html">Podmínky používání</a>
+          </nav>
+          <p class="site-footer-copyright">©Trend&amp;Trade Všechna práva vyhrazena</p>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const header = document.querySelector('[data-menu]');
+      const menuButton = header.querySelector('.tt-menu-toggle');
+      menuButton.addEventListener('click', () => {
+        const isOpen = header.classList.toggle('is-open');
+        menuButton.setAttribute('aria-expanded', String(isOpen));
+      });
+    </script>
+  </body>
+</html>

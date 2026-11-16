@@ -1,0 +1,326 @@
+:root {
+  --page: #151515;
+  --panel: #1e1e1e;
+  --green: #00e448;
+  --green-dark: #00bb38;
+  --text: #f6f6f6;
+  --muted: #d5d5d5;
+}
+
+* { box-sizing: border-box; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+html { scroll-behavior: smooth; }
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--text);
+  background: #090909;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+  width: min(100%, 430px);
+  min-height: 100svh;
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--page);
+}
+
+.hero {
+  position: relative;
+  min-height: 382px;
+  padding: 12px 20px 30px;
+  text-align: center;
+  isolation: isolate;
+  background: #181818 url("../IMG.png") center top / cover no-repeat;
+}
+.hero::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgb(0 0 0 / .08) 36%, rgb(20 20 20 / .24) 100%);
+}
+.brand {
+  margin: 0;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+.brand strong { color: #f36c37; font-weight: 400; }
+.brand-logo {
+  display: block;
+  width: 51px;
+  height: auto;
+  margin: 0 auto;
+}
+.hero-copy {
+  max-width: 290px;
+  margin: 114px auto 0;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.content { padding: 0 17px 16px; }
+.intro {
+  max-width: 260px;
+  margin: -90px auto 18px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 56px;
+  padding: 14px 24px;
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, #21d500, #00b937);
+  box-shadow: 0 8px 18px rgb(0 194 55 / .24);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: .01em;
+  line-height: 1;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  animation: cta-breathe 3.2s ease-in-out infinite;
+  will-change: transform, box-shadow;
+}
+.cta:hover { background: linear-gradient(135deg, #25e800, #00ca3c); }
+.cta:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.cta:active { transform: scale(.98); animation: none; }
+@keyframes cta-breathe {
+  0%, 100% { transform: translateY(0); box-shadow: 0 8px 18px rgb(0 194 55 / .24); }
+  50% { transform: translateY(-2px); box-shadow: 0 11px 22px rgb(0 228 72 / .34); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cta { animation: none; }
+}
+
+.price {
+  margin: 29px 0 27px;
+  color: #e0e0e0;
+  text-align: center;
+  font-size: 14px;
+}
+.sms-card {
+  margin: 0 16px 25px;
+  padding: 17px 20px 18px;
+  border-radius: 4px;
+  background: var(--panel);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+.sms-card p { margin: 0; }
+.sms-keyword, .sms-number { color: var(--green); font-size: 24px; line-height: 1.25; }
+.sms-number { margin-top: 2px !important; }
+.legal-copy { color: var(--muted); font-size: 11px; line-height: 1.22; }
+.legal-copy p { margin: 0 3px 13px; }
+.legal-copy a { color: inherit; }
+
+.site-footer {
+  padding: 30px 0 0;
+  color: #e5e0d6;
+  background: #141414;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+}
+.site-footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px;
+  text-align: center;
+}
+.site-footer-menu { display: flex; justify-content: center; margin: 0 0 20px; white-space: nowrap; }
+.site-footer-menu a {
+  display: block;
+  color: inherit;
+  line-height: 45px;
+  text-decoration: underline;
+  text-underline-offset: 1px;
+}
+.site-footer-menu a + a { margin-left: 20px; }
+.site-footer-menu a:hover, .site-footer-menu a:focus-visible { color: #f26633; }
+.site-footer-menu a:focus-visible { outline: 2px solid #f26633; outline-offset: 2px; }
+.site-footer-copyright { display: block; margin: 0; }
+
+.legal-page { padding: 28px 22px 12px; }
+.legal-page .brand { text-align: center; }
+.legal-page h1 { margin: 30px 0 18px; font-size: 25px; line-height: 1.1; }
+.legal-page h2 { margin: 24px 0 8px; font-size: 16px; }
+.legal-page p, .legal-page li { color: var(--muted); font-size: 14px; line-height: 1.5; }
+.legal-page ul { padding-left: 19px; }
+.back-link { display: inline-block; margin-top: 6px; color: var(--green); font-size: 14px; font-weight: 700; }
+.contact-list { margin: 0; padding: 0; list-style: none; }
+.contact-list li { margin: 10px 0; }
+
+@media (min-width: 431px) {
+  body { padding: 16px 0; }
+  .page { box-shadow: 0 0 42px rgb(0 0 0 / .45); }
+}
+
+@media (max-width: 430px) {
+  .site-footer { font-size: 10px; }
+  .site-footer-menu a + a { margin-left: 12px; }
+}
+
+/* Trend & Trade customer-care page */
+.tt-care-page {
+  width: 100%;
+  min-height: 100svh;
+  color: #1a1917;
+  background: #e5e0d6;
+  font-family: Georgia, "Times New Roman", serif;
+}
+.tt-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 74px;
+  padding: 0 clamp(26px, 7vw, 90px);
+  color: #e5e0d6;
+  background: #141414;
+}
+.tt-wordmark { color: inherit; font-size: 19px; font-variant: small-caps; letter-spacing: .015em; text-decoration: none; }
+.tt-wordmark em { color: #f26633; font-style: normal; }
+.tt-nav { display: flex; align-items: center; gap: clamp(22px, 4vw, 62px); }
+.tt-nav a { color: inherit; font-size: 16px; font-weight: 700; text-decoration: none; }
+.tt-nav a:hover, .tt-nav a:focus-visible { color: #f26633; }
+.tt-nav a:focus-visible, .tt-menu-toggle:focus-visible { outline: 2px solid #f26633; outline-offset: 4px; }
+.tt-menu-toggle { display: none; padding: 8px 0 8px 12px; border: 0; color: inherit; background: transparent; font-size: 25px; line-height: 1; }
+.tt-care-main { max-width: 1120px; margin: 0 auto; padding: clamp(58px, 8vw, 112px) clamp(26px, 7vw, 90px) 86px; }
+.tt-care-kicker { margin: 0 0 18px; color: #f26633; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+.tt-care-main h1 { max-width: 700px; margin: 0; font-size: clamp(47px, 7vw, 86px); font-weight: 400; letter-spacing: -.045em; line-height: .95; }
+.tt-care-intro { max-width: 575px; margin: 30px 0 0; font-size: clamp(20px, 2.3vw, 29px); line-height: 1.25; }
+.tt-care-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 22px; margin-top: clamp(55px, 8vw, 92px); }
+.tt-care-card { min-height: 258px; padding: clamp(28px, 4vw, 48px); background: #667542; color: #f4f1e9; }
+.tt-care-card--dark { background: #141414; }
+.tt-care-card h2 { margin: 0 0 18px; font-size: clamp(28px, 3vw, 41px); font-weight: 400; line-height: 1; }
+.tt-care-card p { max-width: 470px; margin: 0; font-size: 17px; line-height: 1.4; }
+.tt-care-card a { color: inherit; text-underline-offset: 3px; }
+.tt-care-action { display: inline-block; margin-top: 28px; padding: 14px 24px; color: #1a1917 !important; background: #f26633; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: 700; text-decoration: none; text-transform: uppercase; }
+.tt-care-action:hover, .tt-care-action:focus-visible { color: #fff !important; background: #d95329; }
+.tt-care-note { max-width: 670px; margin: 32px 0 0; color: #4e4a43; font-size: 15px; line-height: 1.45; }
+.tt-care-details { max-width: 760px; margin-top: 70px; }
+.tt-care-details section { padding: 28px 0; border-top: 1px solid rgb(26 25 23 / .24); }
+.tt-care-details h2 { margin: 0 0 12px; font-size: clamp(25px, 3vw, 36px); font-weight: 400; line-height: 1.05; }
+.tt-care-details p, .tt-care-details li { max-width: 700px; font-size: 17px; line-height: 1.5; }
+.tt-care-details p { margin: 0; }
+.tt-care-details ul { margin: 14px 0 0; padding-left: 22px; }
+.tt-care-page .site-footer { font-family: Georgia, "Times New Roman", serif; }
+.tt-article { max-width: 930px; margin: 0 auto; padding: clamp(58px, 8vw, 108px) clamp(26px, 7vw, 90px) 86px; }
+.tt-article-kicker { margin: 0 0 18px; color: #f26633; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+.tt-article h1 { max-width: 790px; margin: 0; font-size: clamp(47px, 7vw, 78px); font-weight: 400; letter-spacing: -.045em; line-height: .96; }
+.tt-article-lead { max-width: 650px; margin: 30px 0 55px; font-size: clamp(20px, 2.2vw, 27px); line-height: 1.3; }
+.tt-article section { max-width: 760px; padding: 28px 0; border-top: 1px solid rgb(26 25 23 / .24); }
+.tt-article h2 { margin: 0 0 12px; font-size: clamp(25px, 3vw, 36px); font-weight: 400; line-height: 1.05; }
+.tt-article p, .tt-article li { max-width: 700px; font-size: 17px; line-height: 1.5; }
+.tt-article p { margin: 0; }
+.tt-article p + p { margin-top: 16px; }
+.tt-article ul { margin: 14px 0 0; padding-left: 22px; }
+.tt-article a { color: inherit; text-underline-offset: 3px; }
+.tt-faq-list { border-top: 1px solid rgb(26 25 23 / .24); }
+.tt-faq-list details { padding: 20px 0; border-bottom: 1px solid rgb(26 25 23 / .24); }
+.tt-faq-list summary { cursor: pointer; font-size: clamp(22px, 2.8vw, 32px); line-height: 1.15; }
+.tt-faq-list details p { max-width: 680px; margin: 18px 0 0; }
+.tt-terms-main { max-width: 1085px; margin: 0 auto; padding: 48px clamp(26px, 7vw, 90px) 96px; }
+.tt-terms-back { display: inline-flex; align-items: center; gap: 17px; margin: 0 0 61px; color: #1a1917; font-size: 25px; line-height: 1; text-decoration: none; }
+.tt-terms-back span { color: #f26633; font-family: Arial, Helvetica, sans-serif; font-size: 39px; font-weight: 400; line-height: .55; }
+.tt-terms-document { max-width: 905px; margin: 0 auto; }
+.tt-terms-document > h1 { margin: 0 0 20px; font-size: 16px; font-weight: 700; line-height: 1.25; }
+.tt-terms-document > p { margin: 0; font-size: 15px; line-height: 1.45; }
+.tt-terms-document section { margin-top: 56px; }
+.tt-terms-document h2 { margin: 0 0 19px; font-size: 15px; font-weight: 700; line-height: 1.3; }
+.tt-terms-document h3 { margin: 28px 0 14px; font-size: 15px; font-weight: 700; line-height: 1.3; }
+.tt-terms-document section p, .tt-terms-document section li { max-width: 900px; margin: 0; font-size: 15px; line-height: 1.55; }
+.tt-terms-document section p + p { margin-top: 19px; }
+.tt-terms-document ul { margin: 18px 0 0; padding-left: 21px; }
+.tt-terms-document a { color: #f26633; text-underline-offset: 3px; }
+.tt-faq-main { max-width: 1085px; margin: 0 auto; padding: 48px clamp(26px, 7vw, 90px) 96px; }
+.tt-faq-accordion { max-width: 517px; margin: 88px auto 0; }
+.tt-faq-accordion details { margin-bottom: 10px; color: #e5e0d6; background: #141414; }
+.tt-faq-accordion summary { display: flex; align-items: center; justify-content: space-between; min-height: 62px; padding: 14px 24px 14px 40px; cursor: pointer; font-size: 16px; line-height: 1.25; list-style: none; }
+.tt-faq-accordion summary::-webkit-details-marker { display: none; }
+.tt-faq-accordion summary::after { flex: 0 0 auto; margin-left: 22px; content: "+"; color: #fff; font-family: Arial, Helvetica, sans-serif; font-size: 27px; font-weight: 300; }
+.tt-faq-accordion details[open] summary::after { content: "−"; }
+.tt-faq-accordion p { margin: 0; padding: 0 40px 27px; color: #e5e0d6; font-size: 15px; line-height: 1.5; }
+.tt-faq-accordion a { color: #f26633; text-underline-offset: 3px; }
+.tt-contact-page { min-height: 100svh; color: #1a1917; background: #e5e0d6; font-family: Georgia, "Times New Roman", serif; }
+.tt-contact-top { padding: 29px 50px 0; }
+.tt-contact-back { display: inline-flex; align-items: center; gap: 14px; color: #1a1917; font-size: 27px; line-height: 1; text-decoration: none; }
+.tt-contact-back span { color: #f26633; font-family: Arial, Helvetica, sans-serif; font-size: 41px; line-height: .55; }
+.tt-contact-form { width: min(100% - 48px, 697px); margin: 174px auto 176px; }
+.tt-contact-form > p { margin: 0 0 25px 2px; font-size: 18px; }
+.tt-contact-row { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; }
+.tt-contact-field, .tt-contact-select, .tt-contact-message { width: 100%; border: 0; border-radius: 0; color: #e5e0d6; background: #141414; font-family: Georgia, "Times New Roman", serif; font-size: 14px; }
+.tt-contact-field, .tt-contact-select { height: 66px; padding: 0 25px; }
+.tt-contact-field::placeholder, .tt-contact-message::placeholder { color: #e5e0d6; opacity: 1; font-style: italic; }
+.tt-contact-select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, #f26633 50%), linear-gradient(135deg, #f26633 50%, transparent 50%); background-position: calc(100% - 25px) 29px, calc(100% - 19px) 29px; background-size: 7px 7px, 7px 7px; background-repeat: no-repeat; }
+.tt-contact-message { display: block; min-height: 227px; margin-top: 23px; padding: 21px 25px; resize: vertical; }
+.tt-contact-utility { display: flex; align-items: center; justify-content: space-between; gap: 34px; margin-top: 40px; }
+.tt-contact-attachment { color: #1a1917; font-size: 16px; }
+.tt-contact-file-row { display: flex; align-items: center; gap: 20px; margin-top: 19px; }
+.tt-contact-file { display: inline-flex; align-items: center; justify-content: center; min-width: 169px; height: 45px; padding: 0 18px; border: 1px solid #f26633; color: #f26633; cursor: pointer; font-size: 15px; }
+.tt-contact-file input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.tt-contact-file-status { font-size: 15px; font-style: italic; white-space: nowrap; }
+.tt-contact-captcha { display: flex; align-items: center; width: 258px; height: 70px; padding: 0 17px; color: #fff; background: #141414; font-family: Arial, Helvetica, sans-serif; font-size: 11px; }
+.tt-contact-captcha-box { width: 17px; height: 17px; margin-right: 12px; border: 1px solid #c9c9c9; background: #f4f4f4; }
+.tt-contact-captcha small { display: block; margin-left: auto; color: #c4c4c4; font-size: 7px; line-height: 1.2; text-align: right; }
+.tt-contact-send { display: block; width: 321px; max-width: 100%; height: 49px; margin: 66px auto 48px; border: 0; color: #151515; background: #f26633; cursor: pointer; font-family: Georgia, "Times New Roman", serif; font-size: 15px; }
+.tt-contact-send:hover, .tt-contact-send:focus-visible { color: #fff; background: #d95329; }
+.tt-contact-user { width: 326px; max-width: 100%; margin: 0 auto; }
+.tt-contact-user p { margin: 0 0 17px 2px; font-size: 15px; }
+.tt-contact-user output { display: flex; align-items: center; justify-content: center; min-height: 55px; color: #e5e0d6; background: #141414; font-size: 14px; }
+.tt-contact-page .site-footer { margin-top: 0; }
+
+@media (max-width: 700px) {
+  .tt-contact-top { padding: 27px 28px 0; }
+  .tt-contact-back { font-size: 23px; }
+  .tt-contact-form { width: min(100% - 48px, 520px); margin: 105px auto 88px; }
+  .tt-contact-row { grid-template-columns: 1fr; gap: 16px; }
+  .tt-contact-utility { align-items: flex-start; flex-direction: column; gap: 28px; }
+  .tt-contact-captcha { width: 258px; }
+  .tt-contact-send { margin-top: 54px; }
+}
+
+@media (max-width: 700px) {
+  .tt-header { min-height: 52px; padding: 0 55px 0 118px; }
+  .tt-wordmark { font-size: 16px; }
+  .tt-menu-toggle { display: block; }
+  .tt-nav { position: absolute; z-index: 2; top: 52px; right: 0; left: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 10px 24px 20px; background: #141414; }
+  .tt-header.is-open .tt-nav { display: flex; }
+  .tt-nav a { padding: 12px 0; font-size: 15px; }
+  .tt-care-main { padding: 58px 54px 64px; }
+  .tt-care-grid { grid-template-columns: 1fr; gap: 0; margin-right: -54px; margin-left: -54px; }
+  .tt-care-card { min-height: 0; padding: 42px 54px; }
+  .tt-article { padding: 58px 54px 64px; }
+  .tt-terms-main { padding: 50px 54px 72px; }
+  .tt-terms-back { margin-bottom: 55px; font-size: 23px; }
+  .tt-terms-document section { margin-top: 43px; }
+  .tt-faq-main { padding: 50px 54px 72px; }
+  .tt-faq-accordion { margin-top: 70px; }
+  .tt-faq-accordion summary { min-height: 66px; padding: 14px 22px 14px 25px; font-size: 15px; }
+  .tt-faq-accordion p { padding: 0 25px 24px; font-size: 14px; }
+}

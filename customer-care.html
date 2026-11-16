@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#141414">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Zákaznická péče | Trend &amp; Trade</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="tt-care-page">
+      <header class="tt-header" data-menu>
+        <a class="tt-wordmark" href="index.html">Trend &amp; <em>Trade</em></a>
+        <button class="tt-menu-toggle" type="button" aria-label="Otevřít navigaci" aria-expanded="false" aria-controls="tt-navigation">☰</button>
+        <nav class="tt-nav" id="tt-navigation" aria-label="Hlavní navigace">
+          <a href="https://trendtrade.net/category/business">Byznys</a>
+          <a href="https://trendtrade.net/category/lifestyle">Životní styl</a>
+          <a href="https://trendtrade.net/games">Hry</a>
+          <a href="contact.html">Kontaktujte nás</a>
+          <a href="faq.html">Často kladené otázky</a>
+          <a href="terms.html">Podmínky používání</a>
+        </nav>
+      </header>
+
+      <main class="tt-care-main" id="content">
+        <p class="tt-care-kicker">Trend &amp; Trade</p>
+        <h1>Zákaznická<br>péče</h1>
+        <p class="tt-care-intro">Potřebujete pomoc s přístupem k exkluzivním časopisům? Jsme tu pro vás.</p>
+
+        <section class="tt-care-grid" aria-label="Možnosti zákaznické podpory">
+          <article class="tt-care-card">
+            <h2>Kontaktujte nás</h2>
+            <p>Pro pomoc s přístupem ke službě, objednávkou nebo technickými potížemi napište našemu týmu podpory.</p>
+            <a class="tt-care-action" href="mailto:support@nextmove.digital">Napsat podpoře</a>
+          </article>
+          <article class="tt-care-card tt-care-card--dark">
+            <h2>Rychlá pomoc</h2>
+            <p>Odpovědi na nejčastější otázky o ceně, aktivaci a přístupu najdete v přehledu častých dotazů.</p>
+            <a class="tt-care-action" href="faq.html">Časté dotazy</a>
+          </article>
+        </section>
+
+        <div class="tt-care-details">
+          <section>
+            <h2>S čím vám pomůžeme</h2>
+            <p>Podpora Trend&amp;Trade vám pomůže s přístupem k digitálnímu obsahu, s technickými potížemi i s otázkami k jednorázové objednávce. Pokud se vám obsah nezobrazuje správně, nejprve zkuste stránku znovu načíst nebo ji otevřít v aktuální verzi prohlížeče.</p>
+          </section>
+          <section>
+            <h2>Informace k objednávce</h2>
+            <p>Přístup se aktivuje podle pokynů zobrazených při objednávce. Služba Trend&amp;Trade je jednorázová a neobnovuje se automaticky. Informace o ceně a způsobu objednání vždy ověřte přímo na objednávkové stránce.</p>
+          </section>
+          <section>
+            <h2>Jak napsat podpoře</h2>
+            <p>Abychom mohli váš požadavek vyřídit co nejrychleji, uveďte v e-mailu:</p>
+            <ul>
+              <li>stručný popis problému,</li>
+              <li>telefonní číslo použité při objednávce,</li>
+              <li>datum a přibližný čas objednávky, pokud ho znáte.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Než nás kontaktujete</h2>
+            <p>Podívejte se nejdříve do <a href="faq.html">častých dotazů</a>. Najdete tam informace o aktivaci, ceně i přístupu. Pokud odpověď nenajdete, napište nám na <a href="mailto:support@nextmove.digital">support@nextmove.digital</a>.</p>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer-bottom">
+          <nav class="site-footer-menu" aria-label="Právní a kontaktní odkazy">
+            <a href="contact.html">Kontaktujte nás</a>
+            <a href="faq.html">Často kladené otázky</a>
+            <a href="terms.html">Podmínky používání</a>
+          </nav>
+          <p class="site-footer-copyright">©Trend&amp;Trade Všechna práva vyhrazena</p>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const header = document.querySelector('[data-menu]');
+      const menuButton = header.querySelector('.tt-menu-toggle');
+      menuButton.addEventListener('click', () => {
+        const isOpen = header.classList.toggle('is-open');
+        menuButton.setAttribute('aria-expanded', String(isOpen));
+      });
+    </script>
+  </body>
+</html>

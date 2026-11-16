@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#151515">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Trend &amp; Trade | Exkluzivní časopisy</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero" aria-label="Trend and Trade">
+        <img class="brand-logo" src="../Logo text.png" alt="Trend and Trade">
+        <p class="hero-copy">Klikněte Níže Pro Přístup</p>
+      </section>
+
+      <section class="content" aria-label="Objednávka přístupu">
+        <h1 class="intro">Získejte Přístup K<br>Exkluzivním Časopisům</h1>
+        <!-- Campaign integration values: replace only when the final Click2SMS values are supplied. -->
+        <a class="cta" data-sms-number="XXXX" data-sms-keyword="TNT" href="sms:XXXX?body=TNT" aria-label="Objednat přístup přes SMS">OBJEDNAT</a>
+        <p class="price">Jednorázová platba 99 Kč</p>
+
+        <section class="sms-card" aria-label="SMS objednávka">
+          <p>POŠLETE SMS</p>
+          <p class="sms-keyword">TNT</p>
+          <p>na</p>
+          <p class="sms-number">XXXX</p>
+        </section>
+
+        <section class="legal-copy" aria-label="Informace o službě">
+          <p>Trend&amp;Trade nabízí pečlivě vybrané časopisy z oblasti podnikání, životního stylu a ekonomiky, které vám pomohou zůstat informováni a inspirováni. Platí standardní sazby za MO SMS / GPRS / UMTS. Služba Trend&amp;Trade je poskytována bez automatického obnovení za cenu 99 Kč včetně DPH.</p>
+          <p>Technická podpora: <a href="mailto:support@nextmove.digital">support@nextmove.digital</a>.</p>
+          <p>Všechna práva vyhrazena. Všechny ochranné známky jsou majetkem příslušných vlastníků. Provozovatel služby: Nextmove Digital, 2a Cresswell Gardens, F-3, SW5 0BJ, Londýn, Spojené království.</p>
+        </section>
+      </section>
+
+      <footer class="site-footer">
+        <div class="site-footer-bottom">
+          <nav class="site-footer-menu" aria-label="Trend and Trade – právní a kontaktní odkazy">
+            <a href="contact.html">Kontaktujte nás</a>
+            <a href="faq.html">Často kladené otázky</a>
+            <a href="terms.html">Podmínky používání</a>
+          </nav>
+          <p class="site-footer-copyright">©Trend&amp;Trade Všechna práva vyhrazena</p>
+        </div>
+      </footer>
+    </main>
+    <script>
+      // Keep the Click2SMS link in sync with its editable campaign placeholders.
+      const cta = document.querySelector('.cta');
+      if (cta) {
+        const number = cta.dataset.smsNumber;
+        const keyword = cta.dataset.smsKeyword;
+        cta.href = `sms:${number}?body=${encodeURIComponent(keyword)}`;
+      }
+    </script>
+  </body>
+</html>
