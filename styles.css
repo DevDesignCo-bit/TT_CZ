@@ -42,7 +42,7 @@ body {
   padding: 12px 20px 30px;
   text-align: center;
   isolation: isolate;
-  background: #181818 url("../IMG.png") center top / cover no-repeat;
+  background: #181818 url("assets/hero.png") center top / cover no-repeat;
 }
 .hero::after {
   position: absolute;
